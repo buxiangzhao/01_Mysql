@@ -32,8 +32,6 @@ public class HelloController {
 		userJpa.deleteById(id);
 		return userJpa.findAll();
 	}
-
-
 	@RequestMapping(value = "/index",method = RequestMethod.GET)
 	public String index(){
 		return "index";
