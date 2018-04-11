@@ -50,10 +50,6 @@
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>1.1.9</version>
 		</dependency>
-
-
-
-
 		<!--=================mysql/Jpa支持=============-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -75,6 +71,13 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<!--<scope>provided</scope>-->
 		</dependency>
+		<!--=============Json配置==============-->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.47</version>
+		</dependency>
+
 
 		<!--============测试支持===========-->
 		<dependency>
