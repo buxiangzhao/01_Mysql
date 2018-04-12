@@ -2,6 +2,8 @@ package com.bxz.controller;
 
 import com.bxz.entity.UserEntity;
 import com.bxz.jpa.UserJpa;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +19,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/user")
 public class LoginController {
+    private final static Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
     private UserJpa userJPA;

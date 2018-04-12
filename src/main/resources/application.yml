@@ -40,4 +40,8 @@ spring:
  servlet:
    multipart:
      max-file-size: 1024000 # 单个文件最大值
-     max-request-size: 2048000 # 请求数据最大量
+     max-request-size: 2048000
+logging:
+  level:
+#  该包下的日志记录关闭
+   com.bxz.controller: off
