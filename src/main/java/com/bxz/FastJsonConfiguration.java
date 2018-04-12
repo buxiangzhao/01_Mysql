@@ -32,10 +32,11 @@ public class FastJsonConfiguration extends WebMvcConfigurerAdapter {
 		FastJsonConfig fastJsonConfig = new FastJsonConfig();
 		// 修改配置返回内容的过滤
 		fastJsonConfig.setSerializerFeatures(
-				SerializerFeature.WriteNullListAsEmpty, // List字段为null 输出[]
-				SerializerFeature.WriteNullStringAsEmpty , // 字符类型字段如果为null,输出为"",而非null
-				SerializerFeature.WriteNullBooleanAsFalse , // Boolean字段如果为null,输出为false,而非null
-				SerializerFeature.DisableCircularReferenceDetect, // 消除对统一对象循环引用的问题，默认false
+//				SerializerFeature.WriteNullListAsEmpty, // List字段为null 输出[]
+				SerializerFeature.PrettyFormat ,
+//				SerializerFeature.WriteNullStringAsEmpty , // 字符类型字段如果为null,输出为"",而非null
+//				SerializerFeature.WriteNullBooleanAsFalse , // Boolean字段如果为null,输出为false,而非null
+//				SerializerFeature.DisableCircularReferenceDetect, // 消除对统一对象循环引用的问题，默认false
 				SerializerFeature.WriteMapNullValue  // 是否输出值为null的字段。默认false
 		);
 		// 处理中文乱码 问题

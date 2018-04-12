@@ -18,8 +18,19 @@ public class UserEntity {
 	@Column(name ="t_address")
 	private String address;
 
+	@Column(name ="t_pwd")
+	private String pwd;
+
 	@Column(name = "t_age")
 	private int age;
+
+	public String getPwd() {
+		return pwd;
+	}
+
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
 
 	public int getAge() {
 		return age;
