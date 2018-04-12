@@ -21,6 +21,7 @@ public class HelloController {
 
 	@RequestMapping(value = "/list",method = RequestMethod.GET)
 	public List<UserEntity> list(){
+
 		return userJpa.findAll();
 	}
 	@RequestMapping(value = "/save",method = RequestMethod.GET)

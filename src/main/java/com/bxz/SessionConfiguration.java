@@ -1,5 +1,7 @@
 package com.bxz;
 
+import com.bxz.intercptor.LoggerInterceptor;
+import com.bxz.intercptor.SessionInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -18,6 +20,7 @@ public class SessionConfiguration extends WebMvcConfigurerAdapter
 {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoggerInterceptor()).addPathPatterns("/**");
         registry.addInterceptor(new SessionInterceptor()).addPathPatterns("/**");
     }
 }
